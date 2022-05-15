@@ -1,0 +1,134 @@
+package.json file=>
+ "scripts": {
+    "start": "node server",
+    "server":"nodemon server"
+  },
+
+  terminal start command=>npm run server
+  ---------------
+   mongodbatlast =>  udemytrycatch1
+   username=>mohini
+   pwd => mohiniraut
+------------
+
+req.body -> we have to initialize the middleware for the bodyPraser
+------
+app.use(express.json({extended:false}));->should allow us to data in re.body
+---------
+user post route->
+localhost:5000/api/users/
+Headers->Content-Type,value->application/json
+
+postman testing right values-> db->mongodb atlast
+{"name":"Brad traversy",
+	"email":"techguyinfo@gmail.com",
+	"password":"123456"
+}
+---
+once save user and try to save again then face error->{
+    "errors": [
+        {
+            "msg": "User already exists"
+        }
+    ]
+}
+-----
+validation express/JSON github page
+404=>File Not Found Error
+---------
+userCreateIndex:true db madhe dilyavar come error=>usercreateindex not supported
+----------
+JWT->Json Web Token
+https://jwt.io
+------
+id:user.id here is not need to give id:user._id (<=mongoose provide this)
+------------
+{"mongoURI":"mongodb+srv://mohini:mohiniraut@cluster0.2vza9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+"jwtSecret":"mysecrettoken"
+}
+-------
+existing user delete from mongodb atlast
+localhost:5000/api/users/
+
+{"name":"Brad traversy",
+	"email":"techguyinfo@gmail.com",
+	"password":"123456"
+}
+
+send=>
+getting token=>
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI3MzdjNTYyMDRhNDJkNjI3MGExNWViIn0sImlhdCI6MTY1MTczNTYzOCwiZXhwIjoxNjUyMDk1NjM4fQ.siGR4dDSbaDsXxjBBgJbMygmjhRE7VXQAYcbxYPf7RE"
+}
+---------
+screen lock
+control + command +q
+--------
+status=>401=>Not authorize
+---------
+Checking this route=:Get request
+
+header-:x-auth-token,value->eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI3MzdjNTYyMDRhNDJkNjI3MGExNWViIn0sImlhdCI6MTY1MTczNTYzOCwiZXhwIjoxNjUyMDk1NjM4fQ.siGR4dDSbaDsXxjBBgJbMygmjhRE7VXQAYcbxYPf7RE
+
+localhost:5000/api/auth/
+
+=>If token have some problem then facing error->Token is not valid
+----------
+localhost:5000/api/auth/  => Get request
+headers->x-auth-token,value->eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI3MzdjNTYyMDRhNDJkNjI3MGExNWViIn0sImlhdCI6MTY1MTczNTYzOCwiZXhwIjoxNjUyMDk1NjM4fQ.siGR4dDSbaDsXxjBBgJbMygmjhRE7VXQAYcbxYPf7RE
+
+get response->{
+    "_id": "62737c56204a42d6270a15eb",
+    "name": "Brad traversy",
+    "email": "techguyinfo@gmail.com",
+    "avatar": "//www.gravatar.com/avatar/db3dfd181580347568db62b054b3f5c6?s=200&r=pg&d=mm",
+    "date": "2022-05-05T07:27:18.174Z",
+    "__v": 0
+}
+---------
+Login User ->post route->
+
+localhost:5000/api/auth/
+Headers->Content-Type,value->application/json
+
+body->raw->
+{
+	"email":"techguyinfo@gmail.com",
+	"password":"123456"
+}
+
+Its give token
+
+=======//=========
+Ttotal 14 complete
+=========
+
+Register user
+localhost:5000/api/users/
+
+token ->eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI3ZTAzNGE0YmU2MjQ0ZDUyNjcxYTg5In0sImlhdCI6MTY1MjQyNTU0NiwiZXhwIjoxNjUyNzg1NTQ2fQ.O9-7sUp7vnzdOODbFrijkjrJVzFf93c496Qshbzroaw
+------
+header->x-auth-token
+value->eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI3ZTAzNGE0YmU2MjQ0ZDUyNjcxYTg5In0sImlhdCI6MTY1MjQyNTU0NiwiZXhwIjoxNjUyNzg1NTQ2fQ.O9-7sUp7vnzdOODbFrijkjrJVzFf93c496Qshbzroaw
+=========
+post auth user=>
+localhost:5000/api/auth/
+{"email":"bhargavi@gmail.com","password":"bhargavi"}
+Response give us->token
+=========
+17 vedio start
+-------------
+note=>1>split and trim baghane
+2>async await
+--------------
+=> 17 Vedio complete create update profile
+------
+note=>different between put and post
+--------
+20 VEDIOS COMPLETE
+-----------------
+current ->true aahe tur false ka dakhavato
+------------
+splice.remove,1
+================
+22 vedios complete
